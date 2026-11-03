@@ -128,6 +128,7 @@ function render(now = Date.now()) {
   $('today-sessions').textContent = stats.todaySessions;
   $('total-sessions').textContent = stats.totalSessions;
   $('tree-count').textContent = state.history.length;
+  $('tree-count-label').textContent = state.history.length === 1 ? 'tree' : 'trees';
   const historyKey = JSON.stringify(state.history);
   if (historyKey !== lastHistory) {
     lastHistory = historyKey;
