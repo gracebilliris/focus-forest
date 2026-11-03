@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5ee" />
+    <meta name="description" content="Make a little room for focus. Grow a peaceful forest, one session at a time." />
+    <title>Focus Forest — Room to grow</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to your focus session</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="Focus Forest home">
+          <svg class="brand-icon" viewBox="0 0 36 40" fill="none" aria-hidden="true"><path d="M18 3 6 20h6L3 31h30l-9-11h6L18 3Z" fill="currentColor"/><path d="M18 30v7" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          <span>focus<span class="brand-light">forest</span><span class="brand-period">.</span></span>
+        </a>
+        <nav class="header-links" aria-label="Main navigation">
+          <a class="nav-link" href="#your-forest">Your forest</a>
+          <a class="nav-link" href="#your-progress">Your progress</a>
+        </nav>
+        <span class="local-badge"><span aria-hidden="true" class="status-dot"></span> Just you. Saved locally.</span>
+      </header>
+
+      <main id="main">
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow"><span class="little-line"></span> A QUIETER WAY TO GET THINGS DONE</p>
+          <h1 id="page-title">A little focus.<br class="mobile-break" /> A growing <em>forest.</em></h1>
+          <p class="intro-description">Give one thing your attention. Plant something good.<br />Your forest grows with every completed focus session.</p>
+        </section>
+
+        <div class="workspace">
+          <section class="timer-card" aria-labelledby="phase-label">
+            <div class="card-topline"><span class="eyebrow" id="phase-label">TIME TO FOCUS</span><span class="small-leaf" aria-hidden="true">✦</span></div>
+            <p class="timer-caption">A little space for what matters.</p>
+            <div class="timer-face">
+              <span class="timer-display" id="timer-display" role="timer" aria-label="Time remaining" aria-live="off">25:00</span>
+              <span class="timer-unit">one moment at a time</span>
+            </div>
+            <label class="sr-only" for="timer-progress">Session progress</label>
+            <progress id="timer-progress" max="1" value="0">0%</progress>
+            <p class="timer-status" id="timer-status">Ready when you are. Your next tree starts here.</p>
+            <div class="session-label-field">
+              <label for="session-label">What are you working on? <span class="optional">(optional)</span></label>
+              <input id="session-label" name="session-label" type="text" maxlength="80" placeholder="One small thing…" autocomplete="off" />
+            </div>
+            <div class="timer-actions">
+              <button id="start-button" class="button button-primary" type="button"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="m8 5 7 5-7 5V5Z" fill="currentColor"/></svg> Plant &amp; focus</button>
+              <button id="pause-button" class="button button-primary" type="button" hidden>Pause session</button>
+              <button id="resume-button" class="button button-primary" type="button" hidden>Resume session</button>
+              <button id="break-button" class="button button-primary" type="button" hidden>Take a short break</button>
+              <button id="cancel-button" class="button button-secondary" type="button" hidden>End session</button>
+            </div>
+            <button id="demo-button" class="text-button demo-button" type="button">Try a 10-second demo <span aria-hidden="true">↗</span></button>
+            <p class="demo-note">A quick peek. Demo sessions are marked in your history.</p>
+          </section>
+
+          <section class="forest-card" id="your-forest" aria-labelledby="forest-heading">
+            <div class="forest-card-header">
+              <div><p class="eyebrow">YOUR LITTLE CORNER OF CALM</p><h2 id="forest-heading">Room to grow.</h2></div>
+              <span class="tree-count-badge"><svg aria-hidden="true" viewBox="0 0 20 22" fill="none"><path d="m10 1-7 11h4l-5 6h16l-5-6h4L10 1Z" fill="currentColor"/><path d="M10 17v4" stroke="currentColor" stroke-width="2"/></svg><span id="tree-count">0</span> trees</span>
+            </div>
+            <div id="forest-scene" class="forest-scene"></div>
+            <div class="forest-footer"><span class="forest-caption"><span class="status-dot" aria-hidden="true"></span> Small beginnings. Lasting growth.</span><span class="landscape-time">DAWN, ALWAYS</span></div>
+          </section>
+        </div>
+
+        <section class="settings-card" aria-labelledby="settings-heading">
+          <div class="settings-title"><p class="eyebrow">MAKE IT YOURS</p><h2 id="settings-heading">Find your rhythm.</h2><p>No perfect routine. Just yours.</p></div>
+          <fieldset class="duration-settings">
+            <legend>Set your pace</legend>
+            <div class="duration-fields">
+              <div><label for="focus-duration">Focus</label><div class="number-field"><input id="focus-duration" type="number" min="1" max="180" value="25" inputmode="numeric" /><span>min</span></div></div>
+              <span class="duration-divider" aria-hidden="true">/</span>
+              <div><label for="break-duration">Break</label><div class="number-field"><input id="break-duration" type="number" min="1" max="180" value="5" inputmode="numeric" /><span>min</span></div></div>
+            </div>
+          </fieldset>
+          <fieldset class="species-settings">
+            <legend>Choose your tree</legend>
+            <div class="species-options">
+              <button class="species-button" type="button" data-species="pine" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 32 40"><path d="M16 3 7 17h4L4 29h10v7h4v-7h10L21 17h4Z" fill="#527766"/><path d="M16 12v17" stroke="#345445" stroke-width="1.5"/></svg><span>Pine</span></button>
+              <button class="species-button" type="button" data-species="birch" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 32 40"><path d="M16 15v21" stroke="#ac9a7c" stroke-width="3"/><ellipse cx="16" cy="15" rx="10" ry="13" fill="#a5b88a"/><path d="M16 14v15m0-7-5-4m5 1 4-4" stroke="#f6f1dc" stroke-width="1.5"/></svg><span>Birch</span></button>
+              <button class="species-button" type="button" data-species="maple" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 32 40"><path d="M16 17v19" stroke="#9e7764" stroke-width="3"/><path d="m16 2 5 7 7-1-2 8 5 5-9 5-6 3-6-3-9-5 5-5-2-8 7 1Z" fill="#c98169"/><path d="M16 12v17m0-7-6-5m6 2 5-5" stroke="#a86453" stroke-width="1.5"/></svg><span>Maple</span></button>
+            </div>
+          </fieldset>
+        </section>
+
+        <section class="progress-section" id="your-progress" aria-labelledby="progress-heading">
+          <div class="section-heading"><div><p class="eyebrow">ONE SESSION AT A TIME</p><h2 id="progress-heading">Look how far you’ve grown.</h2></div><span class="section-aside">Every small effort counts.</span></div>
+          <div class="stats-grid">
+            <article class="stat"><span class="stat-label">Today’s focus</span><p><span id="today-minutes">0</span><span class="stat-unit">min</span></p><span class="stat-note">A little more present.</span></article>
+            <article class="stat"><span class="stat-label">Sessions today</span><p id="today-sessions">0</p><span class="stat-note">Space you made for yourself.</span></article>
+            <article class="stat"><span class="stat-label">All-time focus</span><p><span id="total-minutes">0</span><span class="stat-unit">min</span></p><span class="stat-note">Good things take time.</span></article>
+            <article class="stat"><span class="stat-label">Completed sessions</span><p id="total-sessions">0</p><span class="stat-note">One tree for every finish.</span></article>
+          </div>
+          <section class="history-section" aria-labelledby="history-heading">
+            <div class="history-heading"><h3 id="history-heading">Your recent moments</h3><span class="history-note">The story of your forest</span></div>
+            <ul id="history-list" class="history-list"><li class="empty-history"><span class="empty-sprout" aria-hidden="true">↟</span><div>Your forest is a fresh start.<span>Finish your first session to plant a tree and begin your story.</span></div></li></ul>
+          </section>
+        </section>
+
+        <section class="preferences" aria-label="Comfort and data settings">
+          <div class="comfort-settings">
+            <label class="toggle-label" for="sound-toggle"><input id="sound-toggle" type="checkbox" /><span class="toggle-track" aria-hidden="true"></span><span>Completion chime</span></label>
+            <label class="toggle-label" for="motion-toggle"><input id="motion-toggle" type="checkbox" /><span class="toggle-track" aria-hidden="true"></span><span>Reduce motion</span></label>
+          </div>
+          <div class="data-actions"><button class="text-button" id="export-button" type="button">Export your history <span aria-hidden="true">↗</span></button><button class="text-button reset-button" id="reset-button" type="button">Reset forest</button></div>
+        </section>
+        <p class="timer-disclosure">Made for a little less noise. Your history stays in this browser, on this device. An active timer catches up when you return to or reopen this tab; no notifications are sent while your browser is closed. Demo sessions are identified separately.</p>
+        <p id="storage-warning" role="alert" hidden>Browser storage is unavailable or full. Changes cannot be saved on reload. Export your history before leaving.</p>
+        <div id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+      </main>
+      <footer class="site-footer"><span class="footer-brand">focusforest.</span><span>Less rush. More roots.</span><span class="footer-flourish" aria-hidden="true">✳</span></footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

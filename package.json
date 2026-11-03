@@ -1,0 +1,16 @@
+{
+  "name": "focus-forest",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5192 --strictPort",
+    "test": "node --test tests/*.test.js",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5192 --strictPort"
+  },
+  "devDependencies": {
+    "vite": "^6.4.1"
+  },
+  "engines": { "node": ">=22" }
+}
